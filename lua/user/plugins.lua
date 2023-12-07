@@ -70,5 +70,7 @@ require("lazy").setup({
 
     { "rafamadriz/friendly-snippets" },
 
+    -- { "mattn/emmet-vim" },
+
     { import = 'user.plugins.phpactor' },
 })
