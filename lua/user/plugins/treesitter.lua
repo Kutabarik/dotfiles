@@ -59,7 +59,7 @@ return {
       enable = true,
       disable = { "yaml" }
     },
-    context_commentstring = {
+    ts_context_commentstring = {
       enable = true,
     },
     rainbow = {
