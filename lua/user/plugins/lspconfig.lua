@@ -80,6 +80,11 @@ return {
       filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
     })
 
+    require('lspconfig').tsserver.setup({
+      on_attach = on_attach,
+      capabilities = capabilities,
+    })
+
     -- Tailwind CSS
     require('lspconfig').tailwindcss.setup({ capabilities = capabilities })
 
@@ -104,7 +109,6 @@ return {
             return utils.root_has_file({ '.eslintrc.js' })
           end,
         }),
-        -- null_ls.builtins.diagnostics.phpstan, -- TODO: Only if config file
         null_ls.builtins.diagnostics.trail_space.with({ disabled_filetypes = { 'NvimTree' } }),
         null_ls.builtins.formatting.eslint_d.with({
           condition = function(utils)
@@ -141,7 +145,7 @@ return {
     capabilities.textDocument.completion.completionItem.snippetSupport = true
 
     require('lspconfig').emmet_ls.setup({
-        -- on_attach = on_attach,
+        on_attach = on_attach,
         capabilities = capabilities,
         filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "svelte", "pug", "typescriptreact", "vue", "blade" },
         init_options = {

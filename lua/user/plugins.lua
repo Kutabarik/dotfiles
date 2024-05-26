@@ -14,7 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 
-    { import = 'user.plugins.onedark' },
+    { import = 'user.plugins.theme' },
 
     { import = 'user.plugins.vim-commentary' },
 
@@ -73,4 +73,9 @@ require("lazy").setup({
     -- { "mattn/emmet-vim" },
 
     { import = 'user.plugins.phpactor' },
+
+    { import = 'user.plugins.codeium' },
+
+    { 'wakatime/vim-wakatime' },
+
 })

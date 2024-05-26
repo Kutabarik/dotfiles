@@ -4,6 +4,7 @@ local inactiveBg = {
 
 return {
   'akinsho/bufferline.nvim',
+  branch = 'main',
   dependencies = 'nvim-tree/nvim-web-devicons',
   opts = {
     options = {
@@ -34,7 +35,6 @@ return {
         delay = 0,
         reveal = { "close" },
       },
-      separator_style = 'slant',
       modified_icon = '',
       custom_areas = {
         left = function()
