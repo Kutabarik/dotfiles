@@ -53,3 +53,6 @@ vim.keymap.set('n', '<leader>o', ':Neotree float git_status<CR>')
 -- Toggle terminal
 vim.keymap.set('n', '<leader>t', ':FloatermToggle<CR>')
 vim.keymap.set('t', '<F1>', '<C-\\><C-n>:FloatermToggle<CR>')
+
+-- Format selection
+vim.keymap.set("v", "<leader>qf", vim.lsp.buf.format, { remap = false })
