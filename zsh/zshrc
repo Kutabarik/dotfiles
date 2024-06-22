@@ -84,6 +84,16 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+export EDITOR=nvim
+export GIT_EDITOR=nvim
+export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
+
+alias vi="nvim"
+
+alias g="git"
+alias gs="git status"
+alias gh="git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -114,5 +124,4 @@ source $ZSH/oh-my-zsh.sh
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export PATH=$PATH:$HOME/home/mihail-malai/.local/share/nvim/mason/bin
 export PATH=$PATH:$HOME/home/kutabarik/.local/share/nvim/mason/bin
