@@ -4,7 +4,7 @@
 		"metrics": false
 	},
 	"vim_mode": true,
-	"autosave": "on_focus_change",
+	"autosave": { "after_delay": {"milliseconds": 500} },
 	"ui_font_size": 16,
 	"buffer_font_size": 16,
 	"buffer_line_height": {"custom": 2},
@@ -13,7 +13,7 @@
 	"theme": {
 		"mode": "system",
 		"light": "One Light",
-		"dark": "One Dark Boolean"
+		"dark": "Carbonfox"
 	},
 	"gutter": {
 		"folds": false,

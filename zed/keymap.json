@@ -1,0 +1,8 @@
+[
+	{
+		"context": "Editor",
+		"bindings": {
+			"alt-enter": "editor::ToggleCodeActions"
+		}
+	}
+]
