@@ -1,0 +1,53 @@
+{
+	"telemetry": {
+		"diagnostics": false,
+		"metrics": false
+	},
+	"vim_mode": true,
+	"autosave": "on_focus_change",
+	"ui_font_size": 16,
+	"buffer_font_size": 16,
+	"buffer_line_height": {"custom": 2},
+	"ui_font_family": "JetBrainsMono Nerd Font Mono",
+	"buffer_font_family": "JetBrainsMono Nerd Font Mono",
+	"theme": {
+		"mode": "system",
+		"light": "One Light",
+		"dark": "One Dark Boolean"
+	},
+	"gutter": {
+		"folds": false,
+		"code_actions": true
+	},
+	"cursor_blink": false,
+	"format_on_save": "off",
+	"current_line_highlight": "gutter",
+	"soft_wrap": "editor_width",
+	"toolbar": {
+		"selections_menu": false,
+		"quick_actions": false
+	},
+	"vertical_scroll_margin": 7,
+	"relative_line_numbers": true,
+	"project_panel": {
+		"default_width": 300,
+		"indent_size": 15
+	},
+	"collaboration_panel": {
+		"button": false
+	},
+	"chat_panel": {
+		"button": false
+	},
+	"assistant": {
+		"version": "1",
+		"button": false
+	},
+	"tab_bar": {
+		"show_nav_history_buttons": false
+	},
+	"tabs": {
+		"git_status": true
+	},
+	"hard_tabs": true
+}
