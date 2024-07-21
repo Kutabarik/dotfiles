@@ -21,6 +21,6 @@ placement_strategy center
 enable_audio_bell no
 
 # BEGIN_KITTY_THEME
-# Bright Lights
+# Adwaita dark
 include current-theme.conf
 # END_KITTY_THEME
