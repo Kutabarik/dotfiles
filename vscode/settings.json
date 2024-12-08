@@ -7,8 +7,8 @@
   "editor.fontFamily": "'JetBrains Mono'",
   "files.autoSave": "onFocusChange",
   "editor.fontLigatures": true,
-  "liveServer.settings.donotShowInfoMsg": true,
   "workbench.colorTheme": "Min Dark",
+  "workbench.iconTheme": "bearded-icons",
 
   //Мои настройки
   "editor.lineHeight": 2,
@@ -20,63 +20,52 @@
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.cursorBlinking": "smooth",
   "editor.bracketPairColorization.enabled": true,
+  "editor.insertSpaces": false,
+  "editor.linkedEditing": true,
+
   "explorer.compactFolders": false,
+  "window.menuBarVisibility": "compact",
+  "window.commandCenter": false,
+  "workbench.activityBar.location": "hidden",
+  "workbench.layoutControl.enabled": false,
+  "workbench.editor.editorActionsLocation": "hidden",
+  "workbench.editor.empty.hint": "hidden",
+  "workbench.editor.tabSizing": "shrink",
   "workbench.startupEditor": "newUntitledFile",
-  "workbench.iconTheme": "material-icon-theme",
+
+  "breadcrumbs.icons": false,
+  "breadcrumbs.showKeys": false,
+  "breadcrumbs.showFiles": false,
+  "breadcrumbs.symbolPath": "off",
+  "breadcrumbs.showArrays": false,
+  "breadcrumbs.showEvents": false,
+  "breadcrumbs.showFields": false,
+  "breadcrumbs.showClasses": false,
+  "breadcrumbs.showMethods": false,
+  "breadcrumbs.showBooleans": false,
+  "breadcrumbs.showFunctions": false,
+  "breadcrumbs.showConstants": false,
+  "breadcrumbs.showEnumMembers": false,
+  "breadcrumbs.showConstructors": false,
+
+  "git.enableSmartCommit": true,
+
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.gotoLocation.multipleDefinitions": "goto",
+
   "emmet.includeLanguages": {
     "blade": "html",
     "javascript": "html"
   },
   "code-runner.runInTerminal": true,
-  "ecsstractor_port.bem_nesting": true,
-  "ecsstractor_port.brackets_newline_after": false,
-  "terminal.integrated.profiles.windows": {
-    "msys64 - bash": {
-      "path": "C:\\msys64\\usr\\bin\\bash.exe"
-    }
-  },
-  "terminal.integrated.defaultProfile.windows": "msys64 - bash",
-
-  //APC customize
-  // "window.titleBarStyle": "native",
-  "apc.activityBar": {
-    "position": "top",
-    "hideSettings": true,
-    "size": 40
-  },
-  "apc.electron": {
-    "titleBarStyle": "hiddenInset",
-    "trafficLightPosition": {
-      "x": 12,
-      "y": 10
-    }
-  },
-  "apc.statusBar": {
-    "position": "editor-bottom",
-    "height": 23,
-    "fontSize": 12
-  },
-
-  "[vue]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "tailwindCSS.includeLanguages": {
-    "twig": "twig",
-    "php": "php",
-    "plaintext": "html"
-  },
   "typescript.preferences.quoteStyle": "single",
   "javascript.preferences.quoteStyle": "single",
   "prettier.singleQuote": true,
   "prettier.jsxSingleQuote": true,
-  "editor.insertSpaces": false,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.accessibilitySupport": "off",
-  "[handlebars]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "[php]": {
     "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
   },
@@ -86,11 +75,13 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "editor.unicodeHighlight.allowedLocales": {
     "ru": true
   },
   "typescript.format.semicolons": "insert",
-  "liveSassCompile.settings.autoprefix": [],
   "[javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -100,11 +91,10 @@
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "window.menuBarVisibility": "compact",
 
   "vim.leader": "<Space>",
   "vim.hlsearch": true,
-  "vim.surround" : true,
+  "vim.surround": true,
   "vim.normalModeKeyBindingsNonRecursive": [
     // NAVIGATION
     // switch b/w buffers
@@ -177,6 +167,6 @@
     {
       "before": [";", ";"],
       "after": ["<Esc>", "A", ";", "<Esc>"]
-    },
+    }
   ],
 }
