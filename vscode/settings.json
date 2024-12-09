@@ -4,10 +4,10 @@
   "editor.inlineSuggest.enabled": true,
   "security.workspace.trust.untrustedFiles": "open",
   "editor.unicodeHighlight.nonBasicASCII": false,
-  "editor.fontFamily": "'JetBrains Mono'",
+  "editor.fontFamily": "'JetBrainsMono Nerd Font Mono'",
   "files.autoSave": "onFocusChange",
   "editor.fontLigatures": true,
-  "workbench.colorTheme": "Min Dark",
+  "workbench.colorTheme": "Adonis Darker",
   "workbench.iconTheme": "bearded-icons",
 
   //Мои настройки
@@ -22,10 +22,16 @@
   "editor.bracketPairColorization.enabled": true,
   "editor.insertSpaces": false,
   "editor.linkedEditing": true,
+  "editor.gotoLocation.multipleDefinitions": "goto",
 
   "explorer.compactFolders": false,
-  "window.menuBarVisibility": "compact",
+
+  "window.menuBarVisibility": "classic",
   "window.commandCenter": false,
+  "window.titleBarStyle": "custom",
+  "window.enableMenuBarMnemonics": false,
+  "window.customMenuBarAltFocus": false,
+
   "workbench.activityBar.location": "hidden",
   "workbench.layoutControl.enabled": false,
   "workbench.editor.editorActionsLocation": "hidden",
@@ -51,7 +57,6 @@
   "git.enableSmartCommit": true,
 
   "diffEditor.ignoreTrimWhitespace": false,
-  "editor.gotoLocation.multipleDefinitions": "goto",
 
   "emmet.includeLanguages": {
     "blade": "html",
@@ -93,6 +98,7 @@
   },
 
   "vim.leader": "<Space>",
+  "vim.useSystemClipboard": true,
   "vim.hlsearch": true,
   "vim.surround": true,
   "vim.normalModeKeyBindingsNonRecursive": [
