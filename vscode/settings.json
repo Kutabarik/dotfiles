@@ -22,6 +22,7 @@
   "editor.bracketPairColorization.enabled": true,
   "editor.insertSpaces": false,
   "editor.linkedEditing": true,
+  "editor.stickyScroll.enabled": false,
   "editor.gotoLocation.multipleDefinitions": "goto",
 
   "explorer.compactFolders": false,
@@ -38,6 +39,7 @@
   "workbench.editor.empty.hint": "hidden",
   "workbench.editor.tabSizing": "shrink",
   "workbench.startupEditor": "newUntitledFile",
+  "workbench.tree.enableStickyScroll": false,
 
   "breadcrumbs.icons": false,
   "breadcrumbs.showKeys": false,
@@ -55,6 +57,7 @@
   "breadcrumbs.showConstructors": false,
 
   "git.enableSmartCommit": true,
+  "conventionalCommits.gitmoji": false,
 
   "diffEditor.ignoreTrimWhitespace": false,
 
@@ -130,8 +133,7 @@
     },
     // NICE TO HAVE
     { "before": ["leader", "w"], "commands": [":w!"] },
-    { "before": ["leader", "q"], "commands": [":q!"] },
-
+    { "before": ["leader", "x"], "commands": [":q!"] },
     {
       "before": ["]", "d"],
       "commands": ["editor.action.marker.next"]
@@ -175,4 +177,8 @@
       "after": ["<Esc>", "A", ";", "<Esc>"]
     }
   ],
+  "codeium.enableConfig": {
+    "*": true,
+    "properties": true
+  },
 }
