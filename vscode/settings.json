@@ -162,6 +162,8 @@
     { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
     // toggle comment selection
     { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] }
+    //dont copy on paste
+    { "before": ["p"], "after": ["\"", "_d", "P"] }
   ],
   "vim.insertModeKeyBindings": [
     {
