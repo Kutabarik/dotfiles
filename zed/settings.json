@@ -4,16 +4,16 @@
 		"metrics": false
 	},
 	"vim_mode": true,
-	"autosave": { "after_delay": {"milliseconds": 500} },
+	"autosave": { "after_delay": { "milliseconds": 500 } },
 	"ui_font_size": 16,
-	"buffer_font_size": 16,
-	"buffer_line_height": {"custom": 2},
-	"ui_font_family": "JetBrainsMono Nerd Font Mono",
-	"buffer_font_family": "JetBrainsMono Nerd Font Mono",
+	"buffer_font_size": 14,
+	"buffer_line_height": { "custom": 2 },
+	"ui_font_family": "Onest",
+	"buffer_font_family": "JetBrainsMonoNL Nerd Font",
 	"theme": {
 		"mode": "system",
 		"light": "One Light",
-		"dark": "Carbonfox"
+		"dark": "JetBrains New Dark"
 	},
 	"gutter": {
 		"folds": false,
@@ -40,7 +40,7 @@
 		"button": false
 	},
 	"assistant": {
-		"version": "1",
+		"version": "2",
 		"button": false
 	},
 	"tab_bar": {
@@ -49,5 +49,13 @@
 	"tabs": {
 		"git_status": true
 	},
-	"hard_tabs": true
+	"hard_tabs": true,
+	"file_types": {
+		"Blade": ["*.blade.php"]
+	},
+	"languages": {
+		"PHP": {
+			"language_servers": ["phpactor"]
+		}
+	}
 }
