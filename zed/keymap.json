@@ -2,7 +2,92 @@
 	{
 		"context": "Editor",
 		"bindings": {
-			"alt-enter": "editor::ToggleCodeActions"
+			"ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+			"ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+			"ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+			"ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
 		}
-	}
+	},
+	{
+		"context": "Editor && vim_mode == normal",
+		"bindings": {
+			"space e": "workspace::ToggleLeftDock",
+			"ctrl-/": "workspace::ToggleBottomDock",
+			"space p": "editor::Format",
+			"space space": "file_finder::Toggle",
+			"tab": "pane::ActivateNextItem",
+			"shift-tab": "pane::ActivatePrevItem",
+			"space v": "pane::SplitRight",
+			"space x": "pane::CloseActiveItem",
+			"space u b": "editor::ToggleGitBlame",
+			"space u i": "editor::ToggleInlayHints"
+		}
+	},
+	{
+		"context": "Editor && vim_mode == insert",
+		"bindings": {
+			"alt-h": "vim::Left",
+			"alt-l": "vim::Right",
+			"alt-j": "vim::Down",
+			"alt-k": "vim::Up"
+		}
+	},
+	{
+		"context": "Editor && vim_mode == visual",
+		"bindings": {
+			"shift-j": "editor::MoveLineDown",
+			"shift-k": "editor::MoveLineUp"
+		}
+	},
+	{
+		"context": "ProjectPanel",
+		"bindings": {
+			"space e": "workspace::ToggleLeftDock",
+			"space f p": ["projects::OpenRecent", { "create_new_window": false }]
+		}
+	},
+	{
+		"context": "Terminal",
+		"bindings": {
+			"ctrl-/": "workspace::ToggleBottomDock"
+		}
+	},
+	{
+		"context": "Dock",
+		"bindings": {
+			"ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+			"ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+			"ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+			"ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
+		}
+	},
+	{
+		"context": "Editor && vim_mode == visual && !VimWaiting && !VimObject",
+		"bindings": {
+			"p": ["vim::Paste", { "preserveClipboard": true }]
+		}
+	},
+	{
+		"context": "Editor && vim_mode == insert",
+		"bindings": {
+			"j j": ["vim::SwitchMode", "Normal"]
+		}
+	}, 
+	{
+    // Vim: File Tree ("ProjectPanel") actions
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "z c": "project_panel::CollapseSelectedEntry",
+      "z o": "project_panel::ExpandSelectedEntry",
+      "shift-o": "project_panel::RevealInFileManager",
+      "r": "project_panel::Rename",
+      "x": "project_panel::Cut",
+      "y": "project_panel::Copy",
+      "p": "project_panel::Paste",
+      "d": "project_panel::Trash",
+      "shift-d": ["project_panel::Trash", { "skip_prompt": true }],
+      "a": "project_panel::NewFile",
+      "shift-a": "project_panel::NewDirectory"
+    }
+  }
 ]
