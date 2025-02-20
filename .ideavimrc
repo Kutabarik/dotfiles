@@ -1,0 +1,124 @@
+" Enable clipboard support for unnamed register
+set clipboard+=unnamed
+
+" Add HTML tags to the matchpairs list
+set matchpairs+=<:>
+
+" Enable ideajoin plugin
+set ideajoin
+
+let mapleader = ' '
+
+set hlsearch
+
+set ignorecase
+
+set smartcase
+
+set incsearch
+
+" redo
+noremap U <C-r>
+
+inoremap ;; <Esc>A;<Esc>
+inoremap ,, <Esc>A,<Esc>
+
+inoremap jj <Esc>
+
+nnoremap <Esc> :nohlsearch<CR>
+
+noremap p P
+
+vnoremap < <gv
+vnoremap > >gv
+
+" consider camelCase and snake_case words when jumping between words
+" move to the beginning of the next word
+map w [w
+
+" move to the end of the next word
+map e ]w
+
+" move to the beginning of the previous word
+map b [b
+
+" move to the end of the previous word
+map ge ]b
+
+" go to the left split
+map <A-h> <C-w>h
+
+" go to the bottom split
+map <A-j> <C-w>j
+
+" go to the top split
+map <A-k> <C-w>k
+
+" go to the right split
+map <A-l> <C-w>l
+
+" Split mappings
+map <leader>wv <Action>(SplitVertically)
+map <leader>wh <Action>(SplitHorizontally)
+map <leader>ww <Action>(Unsplit)
+map <leader>wa <Action>(UnsplitAll)
+
+" File navigation mappings
+map <leader>fc <Action>(GotoClass)
+map <leader>ff <Action>(GotoFile)
+map <leader>fs <Action>(GotoSymbol)
+map <leader>fa <Action>(GotoAction)
+map <leader>gd <Action>(GotoDeclaration)
+map <leader>gy <Action>(GotoTypeDeclaration)
+map <leader>gi <Action>(GotoImplementation)
+map <leader>gt <Action>(GotoTest)
+map <leader>gm <Action>(GotoSuperMethod)
+map <leader>gl <Action>(GotoLine)
+
+" Code inspection and analysis mappings
+map <leader>sh <Action>(ShowHoverInfo)
+map <leader>oo <Action>(FileStructurePopup)
+
+" Search and replace mappings
+map <S-f> <Action>(Find)
+map <S-r> <Action>(Replace)
+map <leader>fw <Action>(FindInPath)
+map <leader>fr <Action>(ReplaceInPath)
+
+" Refactoring mappings
+map <leader>rn <Action>(RenameElement)
+map <leader>rm <Action>(ExtractMethod)
+map <leader>rv <Action>(IntroduceVariable)
+map <leader>rf <Action>(IntroduceField)
+map <leader>rs <Action>(ChangeSignature)
+map <leader>rr <Action>(Refactorings.QuickListPopupAction)
+
+" Code generation and intention mappings
+map <leader>ga <Action>(ShowIntentionActions)
+map <leader>sw <Action>(SurroundWith)
+map <leader>gg <Action>(Generate)
+map <S-k> <Action>(EditorDuplicateLines)
+map <C-[> <Action>(EditorCompleteStatement)
+
+" Error navigation mappings
+map <leader>en <Action>(GotoNextError)
+map <leader>ep <Action>(GotoPreviousError)
+
+map <C-;> <Action>(RecentFiles)
+map <A-[> <Action>(MethodUp)
+map <A-]> <Action>(MethodDown)
+
+" Navigation mappings
+map <Tab> <Action>(NextTab)
+map <S-Tab> <Action>(PreviousTab)
+
+" Code formatting mappings
+map <leader><leader> <Action>(ReformatCode)
+map <leader>oi <Action>(OptimizeImports)
+map <leader>ra <Action>(RearrangeCode)
+
+map <leader>qq <Action>(CloseContent)
+map <leader>qa <Action>(CloseAllEditors)
+
+set NERDTree
+map <leader>e :NERDTree<CR>
