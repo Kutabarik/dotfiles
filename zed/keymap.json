@@ -1,26 +1,19 @@
 [
 	{
-		"context": "Editor",
-		"bindings": {
-			"ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
-			"ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
-			"ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
-			"ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
-		}
-	},
-	{
 		"context": "Editor && vim_mode == normal",
 		"bindings": {
 			"space e": "workspace::ToggleLeftDock",
 			"ctrl-/": "workspace::ToggleBottomDock",
-			"space p": "editor::Format",
-			"space space": "file_finder::Toggle",
+			"space space": "editor::Format",
+			"space f f": "file_finder::Toggle",
 			"tab": "pane::ActivateNextItem",
 			"shift-tab": "pane::ActivatePrevItem",
-			"space v": "pane::SplitRight",
-			"space x": "pane::CloseActiveItem",
+			"space w v": "pane::SplitRight",
+			"space q q": "pane::CloseActiveItem",
 			"space u b": "editor::ToggleGitBlame",
-			"space u i": "editor::ToggleInlayHints"
+			"space u i": "editor::ToggleInlayHints",
+			"space f p": ["projects::OpenRecent", { "create_new_window": false }],
+			"g c": ["editor::ToggleComments", { "advance_downwards": false }]
 		}
 	},
 	{
@@ -33,6 +26,12 @@
 		}
 	},
 	{
+		"context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
+		"bindings": {
+			"space g g": ["workspace::SendKeystrokes", "alt-shift-t enter"]
+		}
+	},
+	{
 		"context": "Editor && vim_mode == visual",
 		"bindings": {
 			"shift-j": "editor::MoveLineDown",
@@ -42,8 +41,7 @@
 	{
 		"context": "ProjectPanel",
 		"bindings": {
-			"space e": "workspace::ToggleLeftDock",
-			"space f p": ["projects::OpenRecent", { "create_new_window": false }]
+			"space e": "workspace::ToggleLeftDock"
 		}
 	},
 	{
@@ -53,41 +51,32 @@
 		}
 	},
 	{
-		"context": "Dock",
-		"bindings": {
-			"ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
-			"ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
-			"ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
-			"ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
-		}
-	},
-	{
 		"context": "Editor && vim_mode == visual && !VimWaiting && !VimObject",
 		"bindings": {
-			"p": ["vim::Paste", { "preserveClipboard": true }]
+			"p": ["vim::Paste", { "preserve_clipboard": true }]
 		}
 	},
 	{
 		"context": "Editor && vim_mode == insert",
 		"bindings": {
-			"j j": ["vim::SwitchMode", "Normal"]
+			"j j": "vim::SwitchToNormalMode"
 		}
-	}, 
+	},
 	{
-    // Vim: File Tree ("ProjectPanel") actions
-    "context": "ProjectPanel && not_editing",
-    "bindings": {
-      "z c": "project_panel::CollapseSelectedEntry",
-      "z o": "project_panel::ExpandSelectedEntry",
-      "shift-o": "project_panel::RevealInFileManager",
-      "r": "project_panel::Rename",
-      "x": "project_panel::Cut",
-      "y": "project_panel::Copy",
-      "p": "project_panel::Paste",
-      "d": "project_panel::Trash",
-      "shift-d": ["project_panel::Trash", { "skip_prompt": true }],
-      "a": "project_panel::NewFile",
-      "shift-a": "project_panel::NewDirectory"
-    }
-  }
+		// Vim: File Tree ("ProjectPanel") actions
+		"context": "ProjectPanel && not_editing",
+		"bindings": {
+			"z c": "project_panel::CollapseSelectedEntry",
+			"z o": "project_panel::ExpandSelectedEntry",
+			"shift-o": "project_panel::RevealInFileManager",
+			"r": "project_panel::Rename",
+			"x": "project_panel::Cut",
+			"y": "project_panel::Copy",
+			"p": "project_panel::Paste",
+			"d": "project_panel::Trash",
+			"shift-d": ["project_panel::Trash", { "skip_prompt": true }],
+			"a": "project_panel::NewFile",
+			"shift-a": "project_panel::NewDirectory"
+		}
+	}
 ]
