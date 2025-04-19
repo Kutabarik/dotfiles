@@ -14,6 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     require("plugins.neotree"),
+    require("plugins.alpha"),
     require("plugins.colortheme"),
     require("plugins.bufferline"),
     require("plugins.lualine"),
@@ -24,5 +25,5 @@ require("lazy").setup({
     require("plugins.conform"),
     require("plugins.gitsings"),
     require("plugins.indent-blankline"),
-    require("plugins.fugitive"),
+    require("plugins.misc"),
 })

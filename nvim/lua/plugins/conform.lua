@@ -1,25 +1,49 @@
 return {
-  {
-    "stevearc/conform.nvim",
-    optional = true,
-    opts = {
-      formatters_by_ft = {
-        php = { { "pint", "php_cs_fixer" } },
-      },
-      format_on_save = {
-        timeout_ms = 500,
-        lsp_format = "fallback",
-      },
-    },
-  },
-  {
-    "mfussenegger/nvim-lint",
-    optional = true,
-    opts = {
-      linters_by_ft = {
-        php = {},
-      },
-    },
-  },
+	"stevearc/conform.nvim",
+	event = "BufWritePre",
+	cmd = { "ConformInfo" },
+	config = function()
+		local conform = require("conform")
+		local prettier = { "prettierd", "prettier", stop_after_first = true }
+		conform.setup({
+			default_format_opts = {
+				lsp_format = "fallback",
+			},
+			formatters_by_ft = {
+				css = prettier,
+				html = prettier,
+				javascript = prettier,
+				vue = prettier,
+				json = prettier,
+				lua = { "stylua" },
+				php = { "pint" },
+				blade = { "blade-formatter" },
+				typescript = prettier,
+				yaml = prettier,
+			},
+			formatters = {
+				astyle = {
+					command = "astyle",
+					prepend_args = { "-s2", "-c", "-J", "-n", "-q", "-z2", "-xC80" },
+				},
+				prettier = {
+					command = "prettier",
+					prepend_args = { "-w" },
+				},
+				prettierd = {
+					command = "prettierd",
+					prepend_args = { "-w" },
+				},
+			},
+		})
+	end,
+	keys = {
+		{
+			"<leader>rf",
+			function()
+				require("conform").format({ async = true })
+			end,
+			desc = "format buffer",
+		},
+	},
 }
-
