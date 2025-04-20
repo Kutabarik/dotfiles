@@ -94,6 +94,11 @@ alias g="git"
 alias gs="git status"
 alias gh="git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
 
+alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
+alias sa="sail artisan"
+alias sup="sail up -d"
+alias sst="sail stop"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
