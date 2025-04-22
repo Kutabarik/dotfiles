@@ -1,43 +1,89 @@
-return
-{ -- Highlight, edit, and navigate code
-	'nvim-treesitter/nvim-treesitter',
-	build = ':TSUpdate',
-	main = 'nvim-treesitter.configs', -- Sets main module to use for opts
-	-- [[ Configure Treesitter ]] See `:help nvim-treesitter`
+return {
+	"nvim-treesitter/nvim-treesitter",
+	build = ":TSUpdate",
+	main = "nvim-treesitter.configs",
 	opts = {
 		ensure_installed = {
-			'javascript',
-			'typescript',
-			'sql',
-			'dockerfile',
-			'json',
-			'go',
-			'gitignore',
-			'yaml',
-			'markdown',
-			'markdown_inline',
-			'bash',
-			'tsx',
-			'css',
-			'scss',
-			'html',
-			'php',
-			'blade',
-		}, -- Autoinstall languages that are not installed
+			"javascript",
+			"typescript",
+			"sql",
+			"dockerfile",
+			"json",
+			"go",
+			"gitignore",
+			"yaml",
+			"markdown",
+			"markdown_inline",
+			"bash",
+			"tsx",
+			"css",
+			"scss",
+			"html",
+			"php",
+			"blade",
+		},
 		auto_install = true,
 		highlight = {
 			enable = true,
-			-- Some languages depend on vim's regex highlighting system (such as Ruby) for indent rules.
-			--  If you are experiencing weird indenting issues, add the language to
-			--  the list of additional_vim_regex_highlighting and disabled languages for indent.
-			additional_vim_regex_highlighting = { 'ruby' },
 		},
-		indent = { enable = true, disable = { 'ruby' } },
+		indent = {
+			enable = true,
+		},
+		playground = {
+			enable = true,
+			updatetime = 25,
+			persist_queries = false,
+		},
+		autotag = {
+			enable = true,
+			enable_rename = true,
+			enable_close = true,
+			enable_close_on_slash = true,
+		},
+		context_commentstring = {
+			enable = true,
+			config = {
+				javascriptreact = {
+					style_element = "{/*%s*/}",
+				},
+			},
+		},
+		refactor = {
+			highlight_definitions = { enable = true },
+		},
+		incremental_selection = {
+			enable = true,
+			keymaps = {
+				init_selection = "<Leader>,s",
+				node_incremental = "<Leader>,s",
+				scope_incremental = "<Leader>,c",
+				node_decremental = "<Leader>,d",
+			},
+		},
 	},
-	-- There are additional nvim-treesitter modules that you can use to interact
-	-- with nvim-treesitter. You should go explore a few and see what interests you:
-	--
-	--    - Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
-	--    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
-	--    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+	config = function(_, opts)
+		require("nvim-treesitter.configs").setup(opts)
+
+		-- Добавляем поддержку blade
+		local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
+		parser_config.blade = {
+			install_info = {
+				url = "https://github.com/EmranMR/tree-sitter-blade",
+				files = { "src/parser.c" },
+				branch = "main",
+			},
+			filetype = "blade",
+		}
+
+		vim.filetype.add({
+			pattern = {
+				[".*%.blade%.php"] = "blade",
+			},
+		})
+
+		vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
+			pattern = { "*.norg" },
+			command = "set conceallevel=3",
+		})
+	end,
 }

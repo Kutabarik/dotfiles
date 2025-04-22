@@ -1,7 +1,6 @@
 -- Standalone plugins with less than 10 lines of config go here
 return {
 	{
-		-- autoclose tags
 		"windwp/nvim-ts-autotag",
 		config = function()
 			require("nvim-ts-autotag").setup({
@@ -14,11 +13,19 @@ return {
 		end,
 	},
 	{
-		-- Powerful Git integration for Vim
+		"tpope/vim-sleuth",
+	},
+	{
 		"tpope/vim-fugitive",
 	},
 	{
-		-- Autoclose parentheses, brackets, quotes, etc.
+		"rbong/vim-flog",
+		dependencies = {
+			"tpope/vim-fugitive",
+		},
+		lazy = false,
+	},
+	{
 		"windwp/nvim-autopairs",
 		event = "InsertEnter",
 		config = true,
@@ -39,13 +46,10 @@ return {
 		end,
 	},
 	{
-		"Exafunction/codeium.nvim",
+		"ricardoramirezr/blade-nav.nvim",
 		dependencies = {
-			"nvim-lua/plenary.nvim",
 			"hrsh7th/nvim-cmp",
 		},
-		config = function()
-			require("codeium").setup({})
-		end,
+		ft = { "blade", "php" },
 	},
 }

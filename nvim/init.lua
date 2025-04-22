@@ -1,5 +1,6 @@
 require("core.keymaps")
 require("core.options")
+require("core.snippets")
 
 -- [[ Install `lazy.nvim` plugin manager ]]
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -14,10 +15,11 @@ vim.opt.rtp:prepend(lazypath)
 
 local theme = "obscure"
 
+-- Setup plugins
 require("lazy").setup({
-	require("plugins.neotree"),
-	require("plugins.alpha"),
 	require("plugins.themes." .. theme),
+	require("plugins.neotree"),
+	require("plugins.colortheme"),
 	require("plugins.bufferline"),
 	require("plugins.lualine"),
 	require("plugins.treesitter"),
@@ -28,6 +30,8 @@ require("lazy").setup({
 	require("plugins.gitsings"),
 	require("plugins.indent-blankline"),
 	require("plugins.misc"),
+	require("plugins.alpha"),
+	require("plugins.windsurf"),
 })
 
 vim.cmd("colorscheme " .. theme)

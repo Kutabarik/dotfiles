@@ -31,7 +31,7 @@ return {
 
 				-- Rename the variable under your cursor.
 				--  Most Language Servers support renaming across files, etc.
-				map("gr", vim.lsp.buf.rename, "[R]e[n]ame")
+				map("grn", vim.lsp.buf.rename, "[R]e[n]ame")
 
 				-- Execute a code action, usually your cursor needs to be on top of an error
 				-- or a suggestion from your LSP for this to activate.
@@ -150,7 +150,6 @@ return {
 		})
 
 		vim.keymap.set("n", "<Leader>d", "<cmd>lua vim.diagnostic.open_float()<CR>")
-
 		-- LSP servers and clients are able to communicate to each other what features they support.
 		--  By default, Neovim doesn't support everything that is in the LSP specification.
 		--  When you add blink.cmp, luasnip, etc. Neovim now has *more* capabilities.
@@ -210,20 +209,19 @@ return {
 			dockerls = {},
 			jsonls = {},
 			yamlls = {},
-			eslint = {},
+			eslint = { filetypes = { "javascript", "vue",} },
 			prettier = {},
 			emmet_ls = {
 				filetypes = {
 					"css",
 					"html",
 					"javascript",
-					"javascriptreact",
 					"less",
 					"sass",
 					"scss",
-					"typescriptreact",
-					"vue",
 					"blade",
+					"html",
+					"vue",
 				},
 			},
 		}

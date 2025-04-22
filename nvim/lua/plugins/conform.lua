@@ -17,9 +17,9 @@ return {
 				json = prettier,
 				lua = { "stylua" },
 				php = { "pint" },
-				blade = { "blade-formatter" },
 				typescript = prettier,
 				yaml = prettier,
+				blade = { "blade-formatter" },
 			},
 			formatters = {
 				astyle = {
