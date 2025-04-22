@@ -209,7 +209,7 @@ return {
 			dockerls = {},
 			jsonls = {},
 			yamlls = {},
-			eslint = { filetypes = { "javascript", "vue",} },
+			eslint = {},
 			prettier = {},
 			emmet_ls = {
 				filetypes = {

@@ -2,15 +2,6 @@
 return {
 	{
 		"windwp/nvim-ts-autotag",
-		config = function()
-			require("nvim-ts-autotag").setup({
-				aliases = {
-					["php"] = "html",
-					["blade"] = "html",
-					["vue"] = "html",
-				},
-			})
-		end,
 	},
 	{
 		"tpope/vim-sleuth",
@@ -51,5 +42,8 @@ return {
 			"hrsh7th/nvim-cmp",
 		},
 		ft = { "blade", "php" },
+	},
+	{
+		"tpope/vim-surround",
 	},
 }

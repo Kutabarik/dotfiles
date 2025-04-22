@@ -45,9 +45,7 @@ alias sup="sail up -d"
 alias sst="sail stop"
 
 alias snp='function sailnpmpkg() {
-  local path=$1
-  shift
-  sail shell -c "cd packages/$path && npm run $*"
+  sail shell -c "cd packages/$1 && npm run $2"
 }'
 alias sail-pint='sail exec phprun ./vendor/bin/pint'
 alias sail-psalm='sail exec phprun php -d xdebug.mode=off ./vendor/bin/psalm --set-baseline=psalm-baseline.xml'
