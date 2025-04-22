@@ -10,10 +10,10 @@
 			"shift-tab": "pane::ActivatePrevItem",
 			"space w v": "pane::SplitRight",
 			"space q q": "pane::CloseActiveItem",
-			"space u b": "editor::ToggleGitBlame",
 			"space u i": "editor::ToggleInlayHints",
 			"space f p": ["projects::OpenRecent", { "create_new_window": false }],
-			"g c": ["editor::ToggleComments", { "advance_downwards": false }]
+			"g c": ["editor::ToggleComments", { "advance_downwards": false }],
+			"space g a": "editor::ToggleCodeActions"
 		}
 	},
 	{
@@ -63,7 +63,6 @@
 		}
 	},
 	{
-		// Vim: File Tree ("ProjectPanel") actions
 		"context": "ProjectPanel && not_editing",
 		"bindings": {
 			"z c": "project_panel::CollapseSelectedEntry",
@@ -80,3 +79,4 @@
 		}
 	}
 ]
+
