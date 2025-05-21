@@ -64,7 +64,6 @@ return {
 	config = function(_, opts)
 		require("nvim-treesitter.configs").setup(opts)
 
-		-- Добавляем поддержку blade
 		local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
 		parser_config.blade = {
 			install_info = {
@@ -77,7 +76,7 @@ return {
 
 		vim.filetype.add({
 			pattern = {
-				[".*%.blade%.php"] = "blade",
+				[".*%.blade%.php"] = "php",
 			},
 		})
 
