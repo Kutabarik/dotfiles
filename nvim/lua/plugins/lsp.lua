@@ -203,7 +203,10 @@ return {
 
 			phpactor = {},
 			pint = {},
-			psalm = {},
+			psalm = {
+				cmd = { "./vendor/bin/psalm", "--language-server" },
+				root_dir = require("lspconfig.util").root_pattern("psalm.xml", ".git"),
+			},
 			html = { filetypes = { "html", "blade", "twig" } },
 			cssls = {},
 			dockerls = {},

@@ -5,6 +5,7 @@
   "security.workspace.trust.untrustedFiles": "open",
   "editor.unicodeHighlight.nonBasicASCII": false,
   "editor.fontFamily": "'JetBrainsMono Nerd Font Mono'",
+  "editor.fontSize": 15,
   "files.autoSave": "onFocusChange",
   "editor.fontLigatures": true,
   "workbench.colorTheme": "Adonis Darker",
@@ -24,6 +25,11 @@
   "editor.linkedEditing": true,
   "editor.stickyScroll.enabled": false,
   "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.lineNumbers": "relative",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit"
+  },
 
   "explorer.compactFolders": false,
 
@@ -65,7 +71,6 @@
     "blade": "html",
     "javascript": "html"
   },
-  "code-runner.runInTerminal": true,
   "typescript.preferences.quoteStyle": "single",
   "javascript.preferences.quoteStyle": "single",
   "prettier.singleQuote": true,
@@ -74,8 +79,9 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.accessibilitySupport": "off",
+  "laravel-pint.enable": true,
   "[php]": {
-    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+    "editor.defaultFormatter": "DEVSENSE.phptools-vscode"
   },
   "[typescript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
@@ -107,8 +113,8 @@
   "vim.normalModeKeyBindingsNonRecursive": [
     // NAVIGATION
     // switch b/w buffers
-    { "before": ["<Tab>"], "commands": [":bprevious"] },
-    { "before": ["<s-Tab>"], "commands": [":bnext"] },
+    { "before": ["<Tab>"], "commands": [":bnext"] },
+    { "before": ["<s-Tab>"], "commands": [":bprevious"] },
 
     // splits
     { "before": ["leader", "v"], "commands": [":vsplit"] },
@@ -133,7 +139,7 @@
     },
     // NICE TO HAVE
     { "before": ["leader", "w"], "commands": [":w!"] },
-    { "before": ["leader", "x"], "commands": [":q!"] },
+    { "before": ["leader", "q"], "commands": [":q!"] },
     {
       "before": ["]", "d"],
       "commands": ["editor.action.marker.next"]
@@ -161,7 +167,7 @@
     { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
     { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
     // toggle comment selection
-    { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] }
+    { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] },
     //dont copy on paste
     { "before": ["p"], "after": ["\"", "_d", "P"] }
   ],
@@ -183,4 +189,6 @@
     "*": true,
     "properties": true
   },
+  "laravel-pint.enable": true,
+  "editor.formatOnSave": true
 }
