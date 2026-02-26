@@ -7,13 +7,18 @@
 			"space space": "editor::Format",
 			"space f f": "file_finder::Toggle",
 			"tab": "pane::ActivateNextItem",
-			"shift-tab": "pane::ActivatePrevItem",
+			"shift-tab": "pane::ActivatePreviousItem",
 			"space w v": "pane::SplitRight",
 			"space q q": "pane::CloseActiveItem",
 			"space u i": "editor::ToggleInlayHints",
 			"space f p": ["projects::OpenRecent", { "create_new_window": false }],
 			"g c": ["editor::ToggleComments", { "advance_downwards": false }],
-			"space g a": "editor::ToggleCodeActions"
+			"space g a": "editor::ToggleCodeActions",
+			
+			"space x x": "diagnostics::Deploy",
+			"space f w": "pane::DeploySearch",
+			
+			"space a p": "agent::ToggleAgentPane"
 		}
 	},
 	{
@@ -79,4 +84,3 @@
 		}
 	}
 ]
-

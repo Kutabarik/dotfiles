@@ -1,76 +1,118 @@
 {
-	"icon_theme": "Bearded Icon Theme",
-	"telemetry": {
-		"diagnostics": false,
-		"metrics": false
-	},
-	"vim_mode": true,
-	"autosave": { "after_delay": { "milliseconds": 500 } },
-	"ui_font_size": 16,
-	"buffer_font_size": 15.0,
-	"buffer_line_height": { "custom": 2 },
-	"ui_font_family": "Onest",
-	"buffer_font_family": "JetBrainsMono Nerd Font Mono",
-	"buffer_font_features": {
-		"calt": true
-	},
-	"theme": {
-		"mode": "system",
-		"light": "One Light",
-		"dark": "JetBrains New Dark"
-	},
-	"gutter": {
-		"folds": false,
-		"code_actions": true
-	},
-	"cursor_blink": false,
-	"format_on_save": "off",
-	"current_line_highlight": "gutter",
-	"soft_wrap": "editor_width",
-	"toolbar": {
-		"selections_menu": false,
-		"quick_actions": false
-	},
-	"vertical_scroll_margin": 7,
-	"relative_line_numbers": true,
-	"project_panel": {
-		"default_width": 300,
-		"indent_size": 15
-	},
-	"collaboration_panel": {
-		"button": false
-	},
-	"chat_panel": {
-		"button": false
-	},
-	"tab_bar": {
-		"show_nav_history_buttons": false
-	},
-	"tabs": {
-		"git_status": true
-	},
-	"hard_tabs": true,
-	"file_types": {
-		"Blade": ["*.blade.php"]
-	},
-	"languages": {
-		"PHP": {
-			"language_servers": ["phpactor"],
-			"formatter": {
-				"code_actions": {
-					"source.fixAll.phpactor.phpCsFixer": true
-				}
-			}
-		}
-	},
-	"experimental.theme_overrides": {
-		"players": [
-			{
-				"cursor": "#5c78e2ff",
-				"background": "#5c78e2ff",
-				"selection": "#5c78e23d"
-			}
-		]
-	}
+  "scrollbar": {
+    "git_diff": true
+  },
+  "git_panel": {
+    "tree_view": true,
+    "status_style": "label_color",
+    "button": true,
+  },
+  "agent": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "claude-haiku-4.5",
+    },
+  },
+  "agent_servers": {
+    "claude": {
+      "default_mode": "plan",
+      "default_model": "sonnet",
+    },
+    "your_agent_1": {
+      "type": "custom",
+      "command": "path_to_executable",
+      "args": [],
+      "env": {},
+    },
+    "your_agent": {
+      "type": "custom",
+      "command": "path_to_executable",
+      "args": [],
+      "env": {},
+    },
+  },
+  "features": {
+    "edit_prediction_provider": "copilot",
+  },
+  "icon_theme": "Base Charmed Icons",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+  "diagnostics": {
+    "button": true,
+    "include_warnings": true,
+    "inline": {
+      "enabled": true,
+      "update_debounce_ms": 150,
+      "padding": 4,
+      "min_column": 0,
+      "max_severity": null,
+    },
+    "cargo": null,
+  },
+  "vim_mode": true,
+  "autosave": { "after_delay": { "milliseconds": 500 } },
+  "ui_font_size": 16,
+  "buffer_font_size": 15.0,
+  "buffer_line_height": { "custom": 2 },
+  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
+  "buffer_font_features": {
+    "calt": true,
+  },
+  "inlay_hints": {
+    "enabled": true,
+  },
+  "theme": "Fleet Dark",
+  "gutter": {
+    "folds": false,
+  },
+  "cursor_blink": false,
+  "format_on_save": "off",
+  "current_line_highlight": "gutter",
+  "soft_wrap": "editor_width",
+  "toolbar": {
+    "selections_menu": false,
+    "quick_actions": false,
+  },
+  "vertical_scroll_margin": 7,
+  "relative_line_numbers": "enabled",
+  "project_panel": {
+    "default_width": 300,
+    "indent_size": 15,
+  },
+  "collaboration_panel": {
+    "button": false,
+  },
+  "chat_panel": {
+    "button": "never",
+  },
+  "tab_bar": {
+    "show_nav_history_buttons": false,
+  },
+  "tabs": {
+    "git_status": true,
+  },
+  "hard_tabs": true,
+  "file_types": {
+    "Blade": ["*.blade.php"],
+  },
+  "languages": {
+    "PHP": {
+      "code_actions_on_format": {
+        "source.fixAll.phpactor.phpCsFixer": true,
+      },
+      "language_servers": ["phpactor"],
+      "formatter": [],
+    },
+  },
+  "experimental.theme_overrides": {
+    "players": [
+      {
+        "cursor": "#5c78e2ff",
+        "background": "#5c78e2ff",
+        "selection": "#5c78e23d",
+      },
+    ],
+  },
 }
-
