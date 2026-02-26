@@ -25,14 +25,20 @@ alias gf="git fetch"
 alias gp="git pull"
 alias gh="git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
 
-alias cicde="cd ~/Projects/cicde/cicde/"
-alias esup="cd ~/Projects/esuperficia/esuperficia/"
-alias gbg="cd ~/Projects/gbg/gbg.rts.one/"
-alias cnpf="cd ~/Projects/cnpf/rsvm/"
-alias lnm="cd ~/Projects/lnm/lnm/"
-alias edata="cd ~/Projects/edata/edata-2021"
-alias gsp="cd ~/Projects/GSP/gsp"
-alias cons="cd ~/Projects/consultari/consultari-publice"
+alias ld="lazydocker"
+alias vpn="sudo openvpn --config /home/malaim/vpn/RTS-11941.ovpn --auth-user-pass /home/malaim/vpn/auth.txt"
+
+# alias cicde="cd ~/Projects/cicde/cicde/"
+# alias esup="cd ~/Projects/esuperficia/esuperficia/"
+# alias gbg="cd ~/Projects/gbg/gbg.rts.one/"
+# alias cnpf="cd ~/Projects/cnpf/rsvm/"
+# alias lnm="cd ~/Projects/lnm/lnm/"
+# alias edata="cd ~/Projects/edata/edata-2021"
+# alias gsp="cd ~/Projects/GSP/gsp"
+# alias cons="cd ~/Projects/consultari/consultari-publice"
+# alias emt="cd ~/Projects/emt/evaluarea"
+# alias ppm="cd ~/Projects/ppm/ppm-2022"
+# alias graf="cd ~/Projects/monitoring/"
 
 alias sshw="$HOME/go/bin/sshw"
 
@@ -61,3 +67,6 @@ export PATH="$HOME/bin:$PATH"
 export PATH=$HOME/.local/bin:$PATH
 
 unset NVIM_LISTEN_ADDRESS
+
+eval "$(zoxide init zsh)"
+export GOOGLE_CLOUD_PROJECT="e-mediator-484308-r3"

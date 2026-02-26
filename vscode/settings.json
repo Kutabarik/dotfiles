@@ -8,7 +8,7 @@
   "editor.fontSize": 15,
   "files.autoSave": "onFocusChange",
   "editor.fontLigatures": true,
-  "workbench.colorTheme": "Adonis Darker",
+  "workbench.colorTheme": "Min Dark",
   "workbench.iconTheme": "bearded-icons",
 
   //Мои настройки
@@ -28,7 +28,7 @@
   "editor.lineNumbers": "relative",
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit",
-    "source.organizeImports": "explicit"
+    "source.organizeImports": "explicit",
   },
 
   "explorer.compactFolders": false,
@@ -69,41 +69,41 @@
 
   "emmet.includeLanguages": {
     "blade": "html",
-    "javascript": "html"
+    "javascript": "html",
   },
   "typescript.preferences.quoteStyle": "single",
   "javascript.preferences.quoteStyle": "single",
   "prettier.singleQuote": true,
   "prettier.jsxSingleQuote": true,
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "editor.accessibilitySupport": "off",
   "laravel-pint.enable": true,
   "[php]": {
-    "editor.defaultFormatter": "DEVSENSE.phptools-vscode"
+    "editor.defaultFormatter": "DEVSENSE.phptools-vscode",
   },
   "[typescript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
+    "editor.defaultFormatter": "vscode.typescript-language-features",
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[vue]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "editor.unicodeHighlight.allowedLocales": {
-    "ru": true
+    "ru": true,
   },
   "typescript.format.semicolons": "insert",
   "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
 
   "vim.leader": "<Space>",
@@ -123,41 +123,41 @@
     // panes
     {
       "before": ["leader", "h"],
-      "commands": ["workbench.action.focusLeftGroup"]
+      "commands": ["workbench.action.focusLeftGroup"],
     },
     {
       "before": ["leader", "j"],
-      "commands": ["workbench.action.focusBelowGroup"]
+      "commands": ["workbench.action.focusBelowGroup"],
     },
     {
       "before": ["leader", "k"],
-      "commands": ["workbench.action.focusAboveGroup"]
+      "commands": ["workbench.action.focusAboveGroup"],
     },
     {
       "before": ["leader", "l"],
-      "commands": ["workbench.action.focusRightGroup"]
+      "commands": ["workbench.action.focusRightGroup"],
     },
     // NICE TO HAVE
     { "before": ["leader", "w"], "commands": [":w!"] },
     { "before": ["leader", "q"], "commands": [":q!"] },
     {
       "before": ["]", "d"],
-      "commands": ["editor.action.marker.next"]
+      "commands": ["editor.action.marker.next"],
     },
     {
       "before": ["<leader>", "c", "a"],
-      "commands": ["editor.action.quickFix"]
+      "commands": ["editor.action.quickFix"],
     },
     { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
     { "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] },
     {
       "before": ["g", "h"],
-      "commands": ["editor.action.showDefinitionPreviewHover"]
+      "commands": ["editor.action.showDefinitionPreviewHover"],
     },
     {
       "before": ["<C-k>"],
-      "commands": [":nohl"]
-    }
+      "commands": [":nohl"],
+    },
   ],
   "vim.visualModeKeyBindings": [
     // Stay in visual mode while indenting
@@ -169,26 +169,34 @@
     // toggle comment selection
     { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] },
     //dont copy on paste
-    { "before": ["p"], "after": ["\"", "_d", "P"] }
+    { "before": ["p"], "after": ["\"", "_d", "P"] },
   ],
   "vim.insertModeKeyBindings": [
     {
       "before": ["j", "j"],
-      "after": ["<Esc>"]
+      "after": ["<Esc>"],
     },
     {
       "before": [",", ","],
-      "after": ["<Esc>", "A", ",", "<Esc>"]
+      "after": ["<Esc>", "A", ",", "<Esc>"],
     },
     {
       "before": [";", ";"],
-      "after": ["<Esc>", "A", ";", "<Esc>"]
-    }
+      "after": ["<Esc>", "A", ";", "<Esc>"],
+    },
   ],
   "codeium.enableConfig": {
     "*": true,
-    "properties": true
+    "properties": true,
   },
   "laravel-pint.enable": true,
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+  },
+  "Laravel.phpEnvironment": "docker",
+  "claudeCode.preferredLocation": "sidebar",
 }
