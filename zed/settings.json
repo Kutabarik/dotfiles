@@ -93,7 +93,8 @@
   "tabs": {
     "git_status": true,
   },
-  "hard_tabs": true,
+  "hard_tabs": false,
+  "tab_size": 4,
   "file_types": {
     "Blade": ["*.blade.php"],
   },
